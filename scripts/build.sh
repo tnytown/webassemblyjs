@@ -33,6 +33,7 @@ for D in ./packages/*; do
     --out-dir "${D}/esm" \
     --ignore packages/dce/src/libwabt.js \
     $OPTS &
+  echo ./scripts/bundle.mjs "${D}/src/index.js" "${D}/dist" &
 done
 
 wait
