@@ -3,6 +3,7 @@
 import { argv, cwd } from 'node:process';
 
 import * as esbuild from 'esbuild'
+import babel from 'esbuild-plugin-babel'
 import { polyfillNode } from "esbuild-plugin-polyfill-node"
 import flow from 'esbuild-plugin-flow'
 
@@ -35,6 +36,11 @@ esbuild
     bundle: true,
     nodePaths: [`${cwd()}/node_modules/`, "/Users/tnytown/Documents/sw/webassemblyjs/node_modules"],
     plugins: [
+      babel({
+        config: {
+          plugins: ['babel-plugin-mamacro'],
+        },
+      }),
       polyfillNode({}),
       flow(/\.js$|\.flow\.jsx?$/),
       noLiborESMResolver

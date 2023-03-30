@@ -4372,6 +4372,11 @@ es6-weak-map@^2.0.1:
     es6-iterator "^2.0.3"
     es6-symbol "^3.1.1"
 
+esbuild-plugin-babel@^0.2.3:
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/esbuild-plugin-babel/-/esbuild-plugin-babel-0.2.3.tgz#e6bce2ad9b962bf725700b6d0c803eed21b9fff6"
+  integrity sha512-hGLL31n+GvBhkHUpPCt1sU4ynzOH7I1IUkKhera66jigi4mHFPL6dfJo44L6/1rfcZudXx+wGdf9VOifzDPqYQ==
+
 esbuild-plugin-flow@^0.3.2:
   version "0.3.2"
   resolved "https://registry.yarnpkg.com/esbuild-plugin-flow/-/esbuild-plugin-flow-0.3.2.tgz#2aa8c368b39f1eb5792fee388fdee93e73567ea9"
