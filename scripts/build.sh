@@ -16,6 +16,8 @@ if [ -z "$DISABLE_FUZZER_TEST" ]; then
   yarn --cwd ./packages/floating-point-hex-parser run build-fuzzer
 fi
 
+build_bundle ./packages/webassemblyjs &
+
 for D in ./packages/*; do
   if [ ! -d "${D}/src" ]; then
     continue
@@ -36,9 +38,6 @@ for D in ./packages/*; do
   ESM=1 ./node_modules/.bin/babel "${D}/src" \
     --out-dir "${D}/esm" \
     --ignore packages/dce/src/libwabt.js &
-
-  # Build bundle
-  build_bundle "${D}" &
 done
 
 wait

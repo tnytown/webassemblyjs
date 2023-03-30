@@ -10,9 +10,12 @@ let noLiborESMResolver = {
   name: 'noLiborESMResolver',
   setup(build) {
     build.onResolve({ filter: /^@webassemblyjs\// }, async ({ path }) => {
-      if(path.endsWith("index.js") || path.includes("/lib/")) return undefined;
+      if(path.endsWith("index.js") || path.includes("src")) return undefined;
 
-      const result = await build.resolve(`${path}/src/index.js`, {
+      if(path.includes("/lib/")) path = path.replace("/lib/", "/src/")
+      else path = `${path}/src/index.js`
+
+      const result = await build.resolve(path, {
         kind: 'import-statement',
         resolveDir: `${cwd()}/node_modules/`,
       })
