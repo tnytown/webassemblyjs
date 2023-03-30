@@ -21,5 +21,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config user.name "github-actions[bot]"
           git checkout -b release
-          git commit --all -m "Automated build"
+          rm .gitignore
+          git add packages
+          git commit -m "Automated build"
           git push
