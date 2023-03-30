@@ -19,9 +19,7 @@ jobs:
           node-version: '18.x'
           cache: 'yarn'
       - run: yarn install --frozen-lockfile
-      - name: Setup tmate session
-        uses: mxschmitt/action-tmate@v3
-      - run: npm run build --if-present
+      - run: yarn build
       - name: commit and tag stuff
         run: |
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
