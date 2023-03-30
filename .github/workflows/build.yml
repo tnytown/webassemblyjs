@@ -24,7 +24,7 @@ jobs:
         run: |
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config user.name "github-actions[bot]"
-          git branch -f release master
+          git switch -C release
 
           echo 'node_modules/' >.gitignore
           git add --all packages
