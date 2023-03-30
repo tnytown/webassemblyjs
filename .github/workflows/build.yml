@@ -21,7 +21,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config user.name "github-actions[bot]"
           git checkout -b release
-          rm .gitignore
+          echo 'node_modules/' >.gitignore
           git add packages
           git commit -m "Automated build"
-          git push
+          git push -u origin release
