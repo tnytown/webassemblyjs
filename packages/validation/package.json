@@ -17,12 +17,12 @@
   "author": "Sven Sauleau",
   "license": "MIT",
   "dependencies": {
-    "@webassemblyjs/ast": "1.11.3"
+    "@webassemblyjs/ast": "~1.11.3"
   },
   "devDependencies": {
-    "@webassemblyjs/helper-test-framework": "1.11.3",
-    "@webassemblyjs/wasm-parser": "1.11.3",
-    "@webassemblyjs/wast-parser": "1.11.3",
+    "@webassemblyjs/helper-test-framework": "~1.11.3",
+    "@webassemblyjs/wasm-parser": "~1.11.3",
+    "@webassemblyjs/wast-parser": "~1.11.3",
     "wabt": "1.0.0-nightly.20180421"
   }
 }

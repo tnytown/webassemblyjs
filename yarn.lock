@@ -2317,38 +2317,6 @@
   dependencies:
     "@types/yargs-parser" "*"
 
-"@webassemblyjs/floating-point-hex-parser@1.11.3":
-  version "1.11.4"
-
-"@webassemblyjs/helper-api-error@1.11.3":
-  version "1.11.4"
-
-"@webassemblyjs/helper-fsm@1.11.3":
-  version "1.11.4"
-
-"@webassemblyjs/helper-numbers@1.11.3":
-  version "1.11.4"
-  dependencies:
-    "@webassemblyjs/floating-point-hex-parser" "1.11.4"
-    "@webassemblyjs/helper-api-error" "1.11.4"
-    "@xtuc/long" "4.2.2"
-
-"@webassemblyjs/helper-wasm-bytecode@1.11.3":
-  version "1.11.4"
-
-"@webassemblyjs/ieee754@1.11.3":
-  version "1.11.4"
-  dependencies:
-    "@xtuc/ieee754" "^1.2.0"
-
-"@webassemblyjs/leb128@1.11.3":
-  version "1.11.4"
-  dependencies:
-    "@xtuc/long" "4.2.2"
-
-"@webassemblyjs/utf8@1.11.3":
-  version "1.11.4"
-
 "@xtuc/ieee754@^1.2.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@xtuc/ieee754/-/ieee754-1.2.0.tgz#eef014a3145ae477a1cbc00cd1e552336dceb790"

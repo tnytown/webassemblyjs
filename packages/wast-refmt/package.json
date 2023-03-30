@@ -10,8 +10,8 @@
   "author": "Sven Sauleau",
   "license": "MIT",
   "dependencies": {
-    "@webassemblyjs/wast-parser": "1.11.3",
-    "@webassemblyjs/wast-printer": "1.11.3"
+    "@webassemblyjs/wast-parser": "~1.11.3",
+    "@webassemblyjs/wast-printer": "~1.11.3"
   },
   "repository": {
     "type": "git",
