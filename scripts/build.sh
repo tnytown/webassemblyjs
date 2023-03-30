@@ -6,11 +6,17 @@ cd $ROOT_DIR
 
 OPTS="$@"
 
+build_bundle() {
+  ./scripts/bundle.mjs "${1}/src/index.js" "${1}/dist"
+}
+
 sh ./scripts/generate-ast-utils.sh
 
 if [ -z "$DISABLE_FUZZER_TEST" ]; then
   yarn --cwd ./packages/floating-point-hex-parser run build-fuzzer
 fi
+
+build_bundle ./packages/webassemblyjs
 
 for D in ./packages/*; do
   if [ ! -d "${D}/src" ]; then
@@ -32,8 +38,6 @@ for D in ./packages/*; do
   ESM=1 ./node_modules/.bin/babel "${D}/src" \
     --out-dir "${D}/esm" \
     --ignore packages/dce/src/libwabt.js \
-    $OPTS &
-  echo ./scripts/bundle.mjs "${D}/src/index.js" "${D}/dist" &
 done
 
 wait
