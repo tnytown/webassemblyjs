@@ -6,6 +6,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: write # Push branch.
+
     steps:
       - uses: actions/checkout@v3
         with:
