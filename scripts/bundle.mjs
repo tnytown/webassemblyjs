@@ -35,6 +35,7 @@ esbuild
     outdir: argv[3],
     bundle: true,
     nodePaths: [`${cwd()}/node_modules/`],
+    globalName: "WebAssembly",
     plugins: [
       babel({
         config: {
